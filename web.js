@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-fs.readFile('/index', function (err, data) {
+fs.readFileSync('/index', function (err, data) {
   if (err) throw err;
   console.log(data);
 });
